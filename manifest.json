@@ -14,5 +14,5 @@
   "permissions": ["webRequest", "webRequestBlocking", "https://facebook.com/*"],
   // "icons": {...},
 
-  "author": "Aaron",
+  "author": "Aaron"
 }
