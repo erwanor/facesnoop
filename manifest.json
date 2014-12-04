@@ -9,7 +9,7 @@
     },
 
     "browser_action": {
-      "default_icon": "icon.png",
+      "default_icon": "res/icon.png",
       "default_popup": "interface.html"
     }
 
