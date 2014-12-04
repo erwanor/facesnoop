@@ -5,19 +5,24 @@
  *    GNU GENERAL PUBLIC LICENSE V3
  * ##################################
  * */
-
 console.log("Init");
-chrome.webRequest.onBeforeRequest.addListener(
-    function(data) {
-        console.log("INTERCEPTED");
-        console.log("data.url:::"+data.url);
-        if(data.url == "https://www.facebook.com/ajax/mercury/change_read_status.php"){
-            console.log("KILLED");
-            return {cancel: true};
-        }
-        else
-            return null;//{cancel: true};
-    },
+var debug = 0;
+var filter = {urls : ["*://*.facebook.com/*"]};
+var target = "https://www.facebook.com/ajax/mercury/change_read_status.php";
 
-    {urls: ["*://*.facebook.com/*"]},
-    ["blocking"]);
+chrome.webRequest.onBeforeRequest.addListener(
+  function(data) {
+    console.log("INTERCEPTED");
+
+    if(debug)
+      console.log("data.url:::" + data.url);
+
+    if(data.url == target)
+      return {cancel: true};
+
+    else
+      return null;
+  },
+
+  filter,
+  ["blocking"]);
