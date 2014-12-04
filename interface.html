@@ -16,7 +16,8 @@
         text-align: center;
       }
 
-     wrapper {
+      wrapper {
+       position: absolute;
        margin-top: 10px;
      }
 
@@ -25,10 +26,14 @@
         font-family: 'Raleway', sans-serif;
         font-size: 15px;
         display: block;
+        margin-top: 20px;
       }
 
       mode {
         display: inline-block;
+        position: absolute;
+        margin-top: 20%;
+        margin-left: 50%;
       }
 
       button {
@@ -36,13 +41,14 @@
         font-size: 20px;
         background-color: white;
         font-weight: bold;
+        font-family: 'Raleway', sans-serif;
       }
     </style>
   </head>
   <body>
     <header>Facesnoop</header>
     <wrapper>
-    <whitelist>Add a friend to the whitelist <input name="friendname" type="text" size=15 /></whitelist>
+    <whitelist>Add/Remove <input name="friendname" type="text" size=15 /> to/from the whitelist</whitelist>
     <mode><button name="on">ON</button><button name="off">OFF</button></mode>
   </body>
 </html>
