@@ -8,10 +8,14 @@
       "scripts": ["facesnoop.js", "background.js"]
     },
 
+    "browser_action": {
+      "default_icon": "res/icon.png",
+      "default_popup": "interface.html"
+    }
+
     "permissions": ["webRequest",
                   "webRequestBlocking",
                   "https://facebook.com/*"],
 
   "manifest_version": 2,
-  // "icons": {...},
 }
