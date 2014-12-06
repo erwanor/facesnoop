@@ -7,8 +7,6 @@
  * */
 console.log("Init");
 var debug = 0;
-var filter = {urls : ["*://*.facebook.com/*"]};
-var target = "https://www.facebook.com/ajax/mercury/change_read_status.php";
 
 chrome.webRequest.onBeforeRequest.addListener(
   function(data) {
@@ -17,12 +15,12 @@ chrome.webRequest.onBeforeRequest.addListener(
     if(debug)
       console.log("data.url:::" + data.url);
 
-    if(data.url == target)
+    if(data.url == "https://www.facebook.com/ajax/mercury/change_read_status.php")
       return {cancel: true};
 
     else
       return null;
   },
 
-  filter,
+  {urls : ["*://*.facebook.com/*"]},
   ["blocking"]);
