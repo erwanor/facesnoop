@@ -5,18 +5,17 @@
  *    GNU GENERAL PUBLIC LICENSE V3
  * ##################################
  * */
-console.log("Init");
-var debug = 0;
 
+console.log("Init");
 chrome.webRequest.onBeforeRequest.addListener(
   function(data) {
     console.log("INTERCEPTED");
+    console.log("data.url:::" + data.url);
 
-    if(debug)
-      console.log("data.url:::" + data.url);
-
-    if(data.url == "https://www.facebook.com/ajax/mercury/change_read_status.php")
+    if(data.url == "https://www.facebook.com/ajax/mercury/change_read_status.php"){
+      console.log("KILLED");
       return {cancel: true};
+    }
 
     else
       return null;
