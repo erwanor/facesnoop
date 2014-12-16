@@ -1,7 +1,14 @@
 facesnoop
 =========
 
-A chrome extension that enables you to read your Facebook message without notifying your friends. It does a much neater jobs than the current available extensions and have a lot of very cool features in development. We are also totally respectful of your privacy and we do not store any data about you. 
+## Link: 
+
+https://chrome.google.com/webstore/detail/facesnoop/kebmejpcciehlicgipgfinbgdbedeoag
+
+
+### What is Facesnoop?
+
+A chrome extension that enables you to read your Facebook message without notifying your friends. We have a lot of very cool features in development. Contrary to other "similar" extensions available we do not store data about you or your behavior and are very respectful of your privacy.
 
 **Code guidelines:**
 We follow Google's code guideline for Javascript, before making a pull request please read: https://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
