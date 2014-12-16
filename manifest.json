@@ -25,7 +25,7 @@
 
     "permissions": ["webRequest",
                   "webRequestBlocking",
-                  "https://facebook.com/*"],
+                  "*://*.facebook.com/*"],
 
   "manifest_version": 2
 }
