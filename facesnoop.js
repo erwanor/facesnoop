@@ -14,6 +14,9 @@ chrome.webRequest.onBeforeRequest.addListener(
 
     if(debug)
       console.log("data.url:::" + data.url);
+      
+    if(data.url == "https://www.facebook.com/ajax/mercury/send_messages.php")
+      return {cancel: false};
 
     if(data.url == "https://www.facebook.com/ajax/mercury/change_read_status.php")
       return {cancel: true};
