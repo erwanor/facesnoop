@@ -19,18 +19,18 @@ chrome.webRequest.onBeforeRequest.addListener(
       console.log("data.url:::" + data.url);
       
     if(data.url == "https://www.facebook.com/ajax/mercury/send_messages.php") {//if you send messages, then it shows as seen 
-        runIf = 0;
-        xmlhttp.open("POST","change_read_status.php",true);
-        xmlhttp.send();                                                //and notifications are dismissed this way
+        runIf = 0;                            //runIf zero so if statement to cancel isn't run                         
+        xmlhttp.open("POST","change_read_status.php",true);                     //because new AJAX call is sent
+        xmlhttp.send();                                               
     }
     if(data.url == "https://www.facebook.com/ajax/mercury/change_read_status.php") {
-      if (runIf)
-        runIf = 1;
+      if (runIf)                              //checks if call is from send_messages or just change_read_status
+        runIf = 1;                            //reset variable
         return {cancel: true};
     }
 
     else
-      runIf = 1;
+      runIf = 1;                           //reset variable
       return null;
   },
 
