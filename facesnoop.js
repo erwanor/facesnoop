@@ -11,7 +11,7 @@ var runIf = 1;
 
 chrome.webRequest.onBeforeRequest.addListener(
   function(data) {
-    var xmlhttp;
+    var xmlhttp = new XMLHttpRequest();
     
     console.log("INTERCEPTED");
     
@@ -20,7 +20,8 @@ chrome.webRequest.onBeforeRequest.addListener(
       
     if(data.url == "https://www.facebook.com/ajax/mercury/send_messages.php") {//if you send messages, then it shows as seen 
         runIf = 0;                            //runIf zero so if statement to cancel isn't run                         
-        xmlhttp.open("POST","change_read_status.php",true);                     //because new AJAX call is sent
+        xmlhttp.open("POST","change_read_status.php",false);                     //because new AJAX call is sent
+        xmlhttp.setRequestHeader('application/x-www-form-urlencoded');
         xmlhttp.send();                                               
     }
     if(data.url == "https://www.facebook.com/ajax/mercury/change_read_status.php") {
