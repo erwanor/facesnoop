@@ -1,0 +1,31 @@
+{
+  "name": "Facesnoop",
+  "description": "Facesnoop enable you to read your Facebook inbox without notifying your friends",
+  "version": "1.0",
+  "author": "Aaron",
+  "icons": { "16" : "res/icon16.png",
+             "32" : "res/icon32.png",
+             "48" : "res/icon48.png",
+             "128": "res/icon128.png",
+             "256": "res/icon256.png"},
+
+   "background": {
+      "scripts": ["facesnoop.js"]
+    },
+
+    "browser_action": {
+      "default_icon": {  "20" : "res/icon16.png",
+                         "32" : "res/icon32.png",
+                         "48" : "res/icon48.png",
+                         "128": "res/icon128.png",
+                         "256": "res/icon256.png"
+                      },
+      "default_popup": "interface.html"
+    },
+
+    "permissions": ["webRequest",
+                  "webRequestBlocking",
+                  "https://facebook.com/*"],
+
+  "manifest_version": 2
+}
