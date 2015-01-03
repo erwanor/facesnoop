@@ -31,7 +31,7 @@ We follow Google's code guideline for Javascript, before making a pull request p
     * Establish a deployment strategy
     * Add a "viral component" to the product
 
-** Structure **
+**Structure**
 
 The branch *prod* is the production branch and *master* is the main development branch. 
 License and "meta" improvements are made on *meta* and new features/bug fixes have their own branches. Once they have proven to work in "most" cases they can be merged to *master* where they will receive more tests to eventually be used in *prod*.
