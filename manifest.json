@@ -1,7 +1,7 @@
 {
   "name": "Facesnoop",
   "description": "Read your Facebook messages without notifying your friends",
-  "version": "7.0",
+  "version": "7.5",
   "author": "Aaron",
   "icons": { "16" : "res/icon16.png",
              "32" : "res/icon32.png",
