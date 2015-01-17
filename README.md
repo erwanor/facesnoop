@@ -40,5 +40,5 @@ License and "meta" improvements are made on *meta* and new features/bug fixes ha
 Feedback and ideas greatly appreciated: aaron@rely.io
 
 Authors:
-Aaron - University of Waterloo
-Pranav - University of Waterloo
+Aaron O/- University of Waterloo
+Pranav A/- University of Waterloo
