@@ -7,14 +7,14 @@
  * */
 
 console.log("Init");
+var DEBUG = false; // Allow reconfiguration from dev console
+var STATUS_REGEX = new RegExp("https\:\/\/www\.facebook\.com\/ajax\/mercury\/change_read_status\.php\?[a-z-0-9-\=\_\%]*");
+var SEEN_REGEX   = new RegExp("https\:\/\/www\.facebook\.com\/ajax\/mercury\/mark_seen\.php\?[a-z-0-9-\=\_\%]*");
 chrome.webRequest.onBeforeRequest.addListener(
   function(data) {
     console.log("INTERCEPTED");
     console.log("data.url:::" + data.url);
 
-    if(data.url == "https://www.facebook.com/ajax/mercury/change_read_status.php"){
-      console.log("KILLED");
-      return {cancel: true};
     }
 
     else
