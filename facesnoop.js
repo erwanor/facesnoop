@@ -6,7 +6,7 @@
  * ##################################
  * */
 
-console.log("Init");
+console.log("###...> Starting");
 var DEBUG = false; // Allow reconfiguration from dev console
 var STATUS_REGEX = new RegExp("https\:\/\/www\.facebook\.com\/ajax\/mercury\/change_read_status\.php\?[a-z-0-9-\=\_\%]*");
 var SEEN_REGEX   = new RegExp("https\:\/\/www\.facebook\.com\/ajax\/mercury\/mark_seen\.php\?[a-z-0-9-\=\_\%]*");
