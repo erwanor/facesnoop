@@ -15,6 +15,10 @@ chrome.webRequest.onBeforeRequest.addListener(
     console.log("INTERCEPTED");
     console.log("data.url:::" + data.url);
 
+    if (STATUS_REGEX.exec(data.url) || SEEN_REGEX.exec(data.url)) {
+      if (DEBUG)
+        console.log("Killed request.");
+      return { cancel: true };
     }
 
     else
